@@ -16,7 +16,19 @@ class InventoryLocators:
     CART_BUTTON = (By.ID, 'shopping_cart_container')
     CART_BAGE = (By.CLASS_NAME, 'shopping_cart_badge')
     ALL_PRODUCTS = (By.CLASS_NAME, 'inventory_item_name')
-    AZ_BUTTON = (By.XPATH, '//*[@id="header_container"]/div[2]/div[2]/span/select/option[1]')
-    ZA_BUTTON = (By.XPATH, '//*[@id="header_container"]/div[2]/div[2]/span/select/option[2]')
-    ASC_BUTTON = (By.XPATH, '//*[@id="header_container"]/div[2]/div[2]/span/select/option[3]')
-    DESC_BUTTON = (By.XPATH, '//*[@id="header_container"]/div[2]/div[2]/span/select/option[4]')
+    AZ_BUTTON = (
+        By.XPATH,
+        '//*[@id="header_container"]/div[2]/div[2]/span/select/option[1]',
+    )
+    ZA_BUTTON = (
+        By.XPATH,
+        '//*[@id="header_container"]/div[2]/div[2]/span/select/option[2]',
+    )
+    ASC_BUTTON = (
+        By.XPATH,
+        '//*[@id="header_container"]/div[2]/div[2]/span/select/option[3]',
+    )
+    DESC_BUTTON = (
+        By.XPATH,
+        '//*[@id="header_container"]/div[2]/div[2]/span/select/option[4]',
+    )

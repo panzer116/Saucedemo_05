@@ -1,15 +1,16 @@
 import allure
-
+import pytest
 from pages.inventory_page import InventoryPage
 from pages.login_page import LoginPage
 
 
 class TestCartClass:
-
     @allure.epic('US_002.00')
     @allure.story('TC_002.00.01')
     @allure.title("Bage change when adding")
-    def test_change_bage_when_adding(self, driver, username='standard_user', password='secret_sauce'):
+    def test_change_bage_when_adding(
+        self, driver, username='standard_user', password='secret_sauce'
+    ):
         login_page = LoginPage(driver)
         with allure.step('step1 login user'):
             login_page.action_login(username, password)
@@ -19,11 +20,13 @@ class TestCartClass:
         with allure.step('step3 bage has changed'):
             inventory_page.bage_has_changed()
 
-
     @allure.epic('US_002.00')
     @allure.story('TC_002.00.02')
     @allure.title("Button text after remove")
-    def test_change_add_button_text(self, driver, username='standard_user', password='secret_sauce'):
+    @pytest.mark.debug
+    def test_change_add_button_text(
+        self, driver, username='standard_user', password='secret_sauce'
+    ):
         login_page = LoginPage(driver)
         with allure.step('step1 login user'):
             login_page.action_login(username, password)

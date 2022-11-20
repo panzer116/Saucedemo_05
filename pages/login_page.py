@@ -1,5 +1,3 @@
-import time
-
 from locators.locators import LoginLocators as ll
 
 

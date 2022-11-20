@@ -1,4 +1,3 @@
-from conf import URL
 from pages.login_page import LoginPage
 import pytest
 from locators.locators import LoginLocators as ll
