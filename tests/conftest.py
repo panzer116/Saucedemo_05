@@ -12,7 +12,7 @@ drv = None
 directory = 'report/assets/'
 
 
-@pytest.fixture(scope='class')
+@pytest.fixture(scope='function')
 def driver(browser, headless):
     global drv
     Path(directory).mkdir(parents=True, exist_ok=True)
@@ -44,17 +44,17 @@ def pytest_addoption(parser):
     )
 
 
-@pytest.fixture(scope='class')
+@pytest.fixture(scope='function')
 def browser(request):
     return request.config.getoption("--browser")
 
 
-@pytest.fixture(scope='class')
+@pytest.fixture(scope='function')
 def headless(request):
     return request.config.getoption("--headless")
 
 
-@pytest.fixture(scope='class', autouse=True)
+@pytest.fixture(scope='function', autouse=True)
 def setup(driver):
     logging.info('*** start fixture = setup ***')
     driver.get(conf.URL)

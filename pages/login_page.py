@@ -1,4 +1,4 @@
-from locators.login_locators import LoginLocators as ll
+from locators.locators import LoginLocators as ll
 
 
 class LoginPage:
