@@ -6,6 +6,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 import conf
 from pathlib import Path
+import logging
 
 drv = None
 directory = 'report/assets/'
@@ -55,10 +56,10 @@ def headless(request):
 
 @pytest.fixture(scope='class', autouse=True)
 def setup(driver):
-    print('\n*** start fixture = setup ***\n')
+    logging.info('*** start fixture = setup ***')
     driver.get(conf.URL)
     yield driver
-    print('\n*** end fixture = teardown ***\n')
+    logging.info('*** end fixture = teardown ***')
     driver.quit()
 
 
