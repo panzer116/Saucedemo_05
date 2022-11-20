@@ -1,9 +1,13 @@
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from locators.login_locators import LoginLocators as ll
+
 
 
 class LoginPage:
     def __init__(self, driver):
         self.driver = driver
+        self.wait = WebDriverWait(self.driver, 5)
 
     def login_title(self):
         return self.driver.title
@@ -15,4 +19,4 @@ class LoginPage:
 
     def action_logout(self):
         self.driver.find_element(*ll.hamburger_btn).click()
-        self.driver.find_element(*ll.logout_btn).click()
+        self.wait.until(EC.presence_of_element_located(*ll.logout_btn)).click()

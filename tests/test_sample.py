@@ -1,3 +1,5 @@
+import time
+
 from pages.login_page import LoginPage
 import pytest
 from locators.login_locators import LoginLocators as ll
