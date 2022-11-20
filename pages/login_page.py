@@ -3,7 +3,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from locators.login_locators import LoginLocators as ll
 
 
-
 class LoginPage:
     def __init__(self, driver):
         self.driver = driver
@@ -19,4 +18,4 @@ class LoginPage:
 
     def action_logout(self):
         self.driver.find_element(*ll.hamburger_btn).click()
-        self.wait.until(EC.presence_of_element_located(*ll.logout_btn)).click()
+        self.wait.until(EC.element_to_be_clickable(ll.logout_btn)).click()
