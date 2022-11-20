@@ -12,9 +12,9 @@
 ### Built With
 
 * [![Python][python.org]][https://www.python.org/]
-* [![Poetry][python-poetry.org]][https://python-poetry.org/]
-* [![Selenium][Selenium.dev]][https://www.selenium.dev/]
-* [![Pytest][pytest.org]][https://pytest.org/]
+* https://python-poetry.org/
+* https://www.selenium.dev/
+* https://pytest.org/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -73,7 +73,7 @@ target: https://www.saucedemo.com/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
-[python.org]:https://www.python.org/static/img/python-logo.png
+[python.org]:https://www.python.org/static/community_logos/python-logo.png
 [python-poetry.org]: https://python-poetry.org/images/logo-origami.svg
 [Selenium.dev]: http://www.w3.org/2000/svg
 [pytest.org]: https://docs.pytest.org/en/7.2.x/_static/pytest_logo_curves.svg
