@@ -17,18 +17,18 @@ class InventoryLocators:
     CART_BAGE = (By.CLASS_NAME, 'shopping_cart_badge')
     ALL_PRODUCTS = (By.CLASS_NAME, 'inventory_item_name')
     AZ_BUTTON = (
-        By.CSS_SELECTOR,
-        'select.product_sort_container>:nth-child(1)',
+        By.CLASS_NAME,
+        'product_sort_container>:nth-child(1)',
     )
     ZA_BUTTON = (
-        By.CSS_SELECTOR,
-        'select.product_sort_container>:nth-child(2)',
+        By.CLASS_NAME,
+        'product_sort_container>:nth-child(2)',
     )
     ASC_BUTTON = (
-        By.CSS_SELECTOR,
-        'select.product_sort_container>:nth-child(3)',
+        By.CLASS_NAME,
+        'product_sort_container>:nth-child(3)',
     )
     DESC_BUTTON = (
-        By.CSS_SELECTOR,
-        'select.product_sort_container>:nth-child(4)',
+        By.CLASS_NAME,
+        'product_sort_container>:nth-child(4)',
     )
