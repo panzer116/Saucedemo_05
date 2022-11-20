@@ -11,7 +11,7 @@
 
 ### Built With
 
-* [![Python][python.org]][https://www.python.org/]
+* https://www.python.org/
 * https://python-poetry.org/
 * https://www.selenium.dev/
 * https://pytest.org/
