@@ -17,9 +17,6 @@ class LoginPage(Core):
         Core.send_keys(self, ll.input_username, username)
         Core.send_keys(self, ll.input_password, password)
         Core.click(self, ll.login_btn)
-        # self.driver.find_element(*ll.input_username).send_keys(username)
-        # self.driver.find_element(*ll.input_password).send_keys(password)
-        # self.driver.find_element(*ll.login_btn).click()
 
     def action_logout(self):
         self.driver.find_element(*ll.hamburger_btn).click()
