@@ -1,10 +1,12 @@
 from locators.locators import LoginLocators as ll
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from core.core import Core
 
 
-class LoginPage:
+class LoginPage(Core):
     def __init__(self, driver):
+        Core.__init__(self, driver)
         self.driver = driver
         self.wait = WebDriverWait(self.driver, 5)
 
@@ -12,9 +14,12 @@ class LoginPage:
         return self.driver.title
 
     def action_login(self, username, password):
-        self.driver.find_element(*ll.input_username).send_keys(username)
-        self.driver.find_element(*ll.input_password).send_keys(password)
-        self.driver.find_element(*ll.login_btn).click()
+        Core.send_keys(self, ll.input_username, username)
+        Core.send_keys(self, ll.input_password, password)
+        Core.click(self, ll.login_btn)
+        # self.driver.find_element(*ll.input_username).send_keys(username)
+        # self.driver.find_element(*ll.input_password).send_keys(password)
+        # self.driver.find_element(*ll.login_btn).click()
 
     def action_logout(self):
         self.driver.find_element(*ll.hamburger_btn).click()
